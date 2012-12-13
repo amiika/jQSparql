@@ -41,7 +41,7 @@ this.addPrefix = function (prefix,namespace) {
     
 this.prefix = function () {
         var prefixString = "";
-        for(ns in sparql.namespaces) 
+        for(ns in this.namespaces) 
             prefixString+="prefix "+ns+": <"+this.namespace[ns]+"> ";
         return prefixString;
     };
