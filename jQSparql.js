@@ -97,5 +97,15 @@ this.unprefixify = function (qname) {
             }
         } else return "string";
     };
+    
+    this.lookup = function(uri) {
+    return $.ajax({
+        headers: { Accept : 'application/sparql-results+json' },
+        url: 'http://prefix.cc/reverse',
+        dataType: 'json',
+        data: { uri: uri, format: 'json'}
+    });
+}
+
 
 }
