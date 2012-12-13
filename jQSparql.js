@@ -41,7 +41,7 @@ this.addPrefix = function (prefix,namespace) {
     
 this.prefix = function () {
         var prefixString = "";
-        for(ns in this.namespaces) 
+        for(ns in this.namespace) 
             prefixString+="prefix "+ns+": <"+this.namespace[ns]+"> ";
         return prefixString;
     };
