@@ -11,12 +11,13 @@ this.namespace = {
         'db-owl'  : 'http://dbpedia.org/ontology/',
     };
 
-this.query = function(db,q) {
+this.query = function(db,q,c) {
     return $.ajax({
         headers: { Accept : 'application/sparql-results+json' },
         url: db,
         dataType: 'json',
-        data: { query: q, format: 'json'}
+        data: { query: q, format: 'json'},
+        context: c
     });
 }
 
