@@ -1004,6 +1004,4 @@ this.unprefixify = function (qname) {
   "gawd": "http://gawd.atlantides.org/terms/",
   "l4a": "http://labels4all.info/ns/",
   "apivc": "http://purl.org/linked-data/api/vocab#"};
-        
 }
-​
