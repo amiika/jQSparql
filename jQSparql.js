@@ -174,6 +174,7 @@ this.unprefixify = function (qname) {
   "musim": "http://purl.org/ontology/similarity/",
   "air": "http://dig.csail.mit.edu/TAMI/2007/amord/air#",
   "ical": "http://www.w3.org/2002/12/cal/ical#",
+  "icaltzd": "http://www.w3.org/2002/12/cal/icaltzd#",
   "dcq": "http://purl.org/dc/terms/",
   "event": "http://purl.org/NET/c4dm/event.owl#",
   "xfn": "http://vocab.sindice.com/xfn#",
