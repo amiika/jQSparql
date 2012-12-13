@@ -53,12 +53,13 @@ this.prefixToString = function () {
     };
 
 
-this.prefixify = function (url) {
+this.prefixify = function (url,namespaces) {
+        namespaces = typeof namespaces !== 'undefined' ? namespaces : this.namespace;
         var ns = null;
-        for (ns in this.namespace) {
-            if (this.namespace.hasOwnProperty(ns) &&
-                    url.lastIndexOf(this.namespace[ns], 0) === 0) {
-                return url.replace(this.namespace[ns], ns + ":");
+        for (ns in namespaces) {
+            if (namespaces.hasOwnProperty(ns) &&
+                    url.lastIndexOf(namespaces[ns], 0) === 0) {
+                return url.replace(namespaces[ns], ns + ":");
             }
         }
         return url;
@@ -105,6 +106,7 @@ this.unprefixify = function (qname) {
         dataType: 'json',
         data: { uri: uri, format: 'json'}
     });
+    }
     
     // Cleaned list from prefix.cc
     this.lookup = {
@@ -1001,8 +1003,7 @@ this.unprefixify = function (qname) {
   "gxa": "http://www.ebi.ac.uk/gxa/",
   "gawd": "http://gawd.atlantides.org/terms/",
   "l4a": "http://labels4all.info/ns/",
-  "apivc": "http://purl.org/linked-data/api/vocab#"
+  "apivc": "http://purl.org/linked-data/api/vocab#"};
+        
 }
-    
-    
-}
+​
