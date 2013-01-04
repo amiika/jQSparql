@@ -9,6 +9,8 @@ this.namespace = {
         'dct' : 'http://purl.org/dc/terms/',
         'geo' : 'http://www.w3.org/2003/01/geo/wgs84_pos#', 
         'db-owl'  : 'http://dbpedia.org/ontology/',
+        'void' : 'http://rdfs.org/ns/void#',
+        'scovo' : 'http://purl.org/NET/scovo#'
     };
 
 this.query = function(db,q,c) {
