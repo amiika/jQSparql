@@ -101,6 +101,32 @@ this.unprefixify = function (qname) {
             }
         } else return "string";
     };
+
+  this.loadGoogleChartEditor = function(callback) { 
+  
+    google.load("visualization", "1", {packages:["charteditor"]});
+    google.setOnLoadCallback(callback);
+  
+  };
+  
+  this.getGoogleDataTable = function(data) {
+   
+    var vars = data.head.vars;
+    data = data.results.bindings;
+      var dataTable = new google.visualization.DataTable();
+  
+    for (id in vars) dataTable.addColumn(this.googleType(data[0][vars[id]].type),vars[id])
+  
+    for (item in data) { 
+        var row = [];
+        for (id in vars) row.push(data[item][vars[id]].value)
+        dataTable.addRow(row);
+    }
+  
+    return dataTable;
+    
+  }
+    
     
     this.ajaxlookup = function(uri) {
     return $.ajax({
