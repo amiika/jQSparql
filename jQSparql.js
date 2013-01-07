@@ -104,7 +104,7 @@ this.unprefixify = function (qname) {
 
   this.loadGoogleChartEditor = function(callback) { 
   
-    google.load("visualization", "1", {packages:["charteditor"]});
+    google.load("visualization", "1", {packages:["charteditor"],language: "en"});
     google.setOnLoadCallback(callback);
   
   };
